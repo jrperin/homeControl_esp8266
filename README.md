@@ -14,10 +14,9 @@ Múltiplas URLs podem ser adicionadas separando-as por vígulas.
 Menu: Ferramentas > Placa > Gerenciador de Placas
 No campo de busca coloque esp8266 e instale o gerenciador referente à placa.
 
-
 Gravar o programa no ESP8266
 
-Tive problemas, ele ficava resetando direto apresentando a mensagem na console:
+O programa de exemplo do próprio arduino ocasionava o erro abaixo:
 
  ets Jan  8 2013,rst cause:4, boot mode:(3,3)
 
@@ -29,12 +28,10 @@ csum 0x2d
 v09f0c112
 ~ld
 
-Achei esse site que falava como resolver:
+Usando outros programas funcionou normalmente.
 
-http://internetofhomethings.com/homethings/?p=396
+Para fazer o update do Firmware do ESP8266 (não necessário):
 
-
-------------- nao funcionou -------------------------------
 Update do firmware do ESP-01:
 http://www.whatimade.today/flashing-the-nodemcu-firmware-on-the-esp8266-linux-guide/
 
@@ -43,3 +40,5 @@ https://github.com/themadinventor/esptool
 
 Execute:
 ./esptool.py -p /dev/ttyUSB0 write_flash 0x000000 v0.9.5.2\ AT\ Firmware.bin
+
+
