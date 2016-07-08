@@ -65,3 +65,7 @@ Usando outros programas funcionou normalmente.
  > ./esptool.py -p /dev/ttyUSB0 write_flash 0x000000 v0.9.5.2\ AT\ Firmware.bin
 
 
+4. Links interessantes:
+  
+  > http://www.whatimade.today/esp8266-easiest-way-to-program-so-far/
+
