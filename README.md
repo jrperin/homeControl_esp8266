@@ -69,3 +69,6 @@ Usando outros programas funcionou normalmente.
   
   > http://www.whatimade.today/esp8266-easiest-way-to-program-so-far/
 
+  > http://blog.thethings.io/connect-esp8266-to-the-internet-at-thethings-io/
+  
+
