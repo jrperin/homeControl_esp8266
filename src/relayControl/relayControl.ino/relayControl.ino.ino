@@ -176,7 +176,7 @@ String getHtml(void){
   s += "<body>";
   s += "<h1> relayControl_ </h1>";
   s += "<h3>" + ipStr + "</h3>";
-  s += "<h2>" + mac_addr + "</h2>";
+  s += "<h4>" + mac_addr + "</h4>";
   s += "<br>";
   s += "<form method='get' action='a'>";
   s += "<div style='width: 180px; margin:auto; text-align: left'>";
