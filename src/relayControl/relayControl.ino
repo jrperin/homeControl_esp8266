@@ -2,22 +2,25 @@
 #include <ESP8266mDNS.h>
 //#include <WiFiClient.h>
 #include <EEPROM.h>
+#include <cstring>
 
 MDNSResponder mdns;
 WiFiServer server(80);
 
-const char* ssid = "relayControl";
+char* ssid = "relayControl";
 String st;
 byte relayStatus = 0;
 byte ambiente = 1;
 
-/*
-GPIO0   = 0
-GPIOTXD = 1
-GPIO2   = 2
-GPIORXD = 3
-*/
+uint8_t MAC_array[6];
+//char MAC_char[18];
+//char MAC_char_ssid[12];
+String mac_addr = "";
+String mac_addr_clear = "";
 
+ 
+
+/* GPIO0 = 0 ; GPIOTXD = 1 ; GPIO2 = 2 ; GPIORXD = 3 */
 #define relayTest 2  //Test
 #define relayProd 3  //Production
 
@@ -34,6 +37,42 @@ void setup() {
   digitalWrite(relayTest, LOW);
   pinMode(relayProd, OUTPUT);
   digitalWrite(relayProd, LOW);
+
+  WiFi.macAddress(MAC_array);
+
+    Serial.println("MAC_array");
+    for (int i = 0; i < sizeof(MAC_array); i++){
+      Serial.print(MAC_array[i]);
+      Serial.print(" => ");
+      Serial.println(String(MAC_array[i], HEX));
+    }
+    Serial.println("MAC_array - fim");
+    
+    for (int i = 0; i < sizeof(MAC_array); i++){
+      String strAux = "0" + String(MAC_array[i], HEX);
+      strAux = strAux.substring(strAux.length() -2, strAux.length());
+      mac_addr +=  strAux;
+      mac_addr_clear += strAux;
+      if (i < sizeof(MAC_array)-1){
+           mac_addr += ":";
+      }
+    }
+
+    String ssidFullName = "relayControl_" + mac_addr_clear;
+    strcpy(ssid, ssidFullName.c_str());
+
+    Serial.print("mac_addr: [");
+    Serial.print(mac_addr);
+    Serial.println("]");
+
+    Serial.print("mac_addr_clear: [");
+    Serial.print(mac_addr_clear);
+    Serial.println("]");
+
+    Serial.print("ssid: [");
+    Serial.print(ssid);
+    Serial.println("]");
+    
   
   setupAP(); 
 }
@@ -137,6 +176,7 @@ String getHtml(void){
   s += "<body>";
   s += "<h1> relayControl_ </h1>";
   s += "<h3>" + ipStr + "</h3>";
+  s += "<h2>" + mac_addr + "</h2>";
   s += "<br>";
   s += "<form method='get' action='a'>";
   s += "<div style='width: 180px; margin:auto; text-align: left'>";
