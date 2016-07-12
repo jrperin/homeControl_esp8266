@@ -71,4 +71,6 @@ Usando outros programas funcionou normalmente.
 
   > http://blog.thethings.io/connect-esp8266-to-the-internet-at-thethings-io/
   
-
+  > iot eclipse mosquito (mqtt broker)
+  > * http://mosquitto.org/download/
+  > * http://www.switchdoc.com/2016/02/tutorial-installing-and-testing-mosquitto-mqtt-on-raspberry-pi/
