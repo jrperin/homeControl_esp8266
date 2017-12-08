@@ -16,6 +16,11 @@
 2. Menu: Ferramentas > Placa > Gerenciador de Placas
  1. No campo de busca coloque esp8266 e instale o gerenciador referente à placa.
 
+3. Driver Download:
+![PL2303HX - USB Dongle Driver] (https://github.com/jrperin/homeControl_esp8266/blob/master/PL2303HX_USB_Dongle.jpg)
+
+
+[Download Link] (http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=225&pcid=41)
 
 
 ## Preparando o Hardware
