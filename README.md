@@ -2,11 +2,11 @@
 
 ## Preparando o ambiente
 
-##### Instalar arduino IDE 1.6.8 do site do arduino:
+#### Instalar arduino IDE 1.6.8 do site do arduino:
 
-[https://www.arduino.cc/en/Main/Software] (https://www.arduino.cc/en/Main/Software)
+[https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software)
 
-##### Adicione uma nova origem no gerenciados de placas da IDE do arduino.
+#### Adicione uma nova origem no gerenciados de placas da IDE do arduino.
 
 1. Menu: Arquivo > Preferências > Configurações
  1. No campo URLs adicionais de gerenciadores de placas adicione:
@@ -16,11 +16,11 @@
 2. Menu: Ferramentas > Placa > Gerenciador de Placas
  1. No campo de busca coloque esp8266 e instale o gerenciador referente à placa.
 
-3. Driver Download:
-![PL2303HX - USB Dongle Driver] (https://github.com/jrperin/homeControl_esp8266/blob/master/PL2303HX_USB_Dongle.jpg)
+#### PL230HX
 
+![PL2303HX - USB Conector](https://github.com/jrperin/homeControl_esp8266/blob/master/PL2303HX_USB_Dongle.jpg)
 
-[Download Link] (http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=225&pcid=41)
+[Download Driver](http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=225&pcid=41)
 
 
 ## Preparando o Hardware
