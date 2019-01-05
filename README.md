@@ -55,10 +55,25 @@
 
 ![PL2303HX - USB Conector](https://github.com/jrperin/homeControl_esp8266/blob/master/PL2303HX_USB_Dongle.jpg)
 
-[Download Driver](http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=225&pcid=41)
+[Download Windows Driver](http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=225&pcid=41)
 
+__Problemas em reconhecer o módulo no desktop novo:__  
+  
+Na Bios alterar:  
+> - USB legacy mode off  
+> - XHCI hands-off - enable  
 
-#### CH340G - Protótipo
+Alterar o arquivo:  
+> * /etc/default/grub  
+> Adicionar alinha:  
+> GRUB_CMDLINE_LINUX="iommu=soft"  
+  
+Salvar e recriar o grup com:  
+> * sudo update-grub.  
+  
+  
+  
+## CH340G - Protótipo
 http://fobit.blogspot.com/2014/11/ch340g-in-eagle.html
 
 
