@@ -58,9 +58,11 @@
 [Download Driver](http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=225&pcid=41)
 
 
+#### CH340G - Protótipo
+http://fobit.blogspot.com/2014/11/ch340g-in-eagle.html
+
+
 ## Preparando o Hardware
-
-
 
 Gravar o programa no ESP8266
 
