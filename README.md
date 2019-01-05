@@ -9,12 +9,47 @@
 #### Adicione uma nova origem no gerenciados de placas da IDE do arduino.
 
 1. Menu: Arquivo > Preferências > Configurações
- 1. No campo URLs adicionais de gerenciadores de placas adicione:
+ * No campo URLs adicionais de gerenciadores de placas adicione:
     * http://arduino.esp8266.com/stable/package_esp8266com_index.json
     * Múltiplas URLs podem ser adicionadas separando-as por vígulas.
 
 2. Menu: Ferramentas > Placa > Gerenciador de Placas
- 1. No campo de busca coloque esp8266 e instale o gerenciador referente à placa.
+ * No campo de busca coloque esp8266 e instale o gerenciador referente à placa.
+ 
+#### Instalar Dependencias  
+
+1. ESP8266WiFi  
+ ```
+   cd ~/arduino  
+   cd hardware  
+   mkdir esp8266com  
+   cd esp8266com  
+   git clone https://github.com/esp8266/Arduino.git esp8266  
+   cd esp8266/tools  
+   python get.py  
+ ```
+ * Reiniciar a IDE do Arduino  
+   
+2. pubsub 
+  * Sketch -> Incluir Bibliotecas -> Gerenciar Bibliotecas... -> Digitar PubSub no campo de busca -> Install (PubSubClient by Nick O'Leary)
+    
+3. RemoteDebug
+  * Sketch -> Incluir Bibliotecas -> Gerenciar Bibliotecas... -> Digitar remotedebug no campo de busca -> instalar (Joao Lopes / RemoteDebug)
+
+#### Habilitar porta serial no Linux
+
+  1. Abra o terminal e inclua o usuário nos grupos "tty" e "dialout", com os comandos:
+```
+  $ sudo usermod -a -G tty teu_usuario
+  $ sudo usermod -a -G dialout teu_usuario
+```
+  2. Agora faça logout e em seguida, login novamente.
+
+  3. Para verificar se os grupos foram incluídos, use o comando:
+```
+  $ groups
+```
+
 
 #### PL230HX
 
