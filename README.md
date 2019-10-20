@@ -14,7 +14,7 @@
     * Múltiplas URLs podem ser adicionadas separando-as por vígulas.
 
 2. Menu: Ferramentas > Placa > Gerenciador de Placas
- * No campo de busca coloque esp8266 e instale o gerenciador referente à placa.
+ * No campo de busca coloque esp8266 e instale o gerenciador referente à placa (_esp8266 by ESP8266 Community_)
  
 #### Instalar Dependencias  
 
